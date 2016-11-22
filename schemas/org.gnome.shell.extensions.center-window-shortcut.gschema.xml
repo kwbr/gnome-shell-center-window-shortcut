@@ -1,0 +1,11 @@
+<schemalist>
+
+  <schema path="/org/gnome/shell/extensions/center-window-shortcut/" id="org.gnome.shell.extensions.center-window-shortcut">
+
+    <key type="as" name="center-window-shortcut">
+        <default><![CDATA[['<Super>C']]]></default>
+        <summary>Move to center of the current workspace</summary>
+    </key>
+
+  </schema>
+</schemalist>

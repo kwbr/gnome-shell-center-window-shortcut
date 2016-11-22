@@ -1,0 +1,7 @@
+{
+  "shell-version": ["3.22"],
+  "uuid": "center_window@kai.weber-glorybox.de",
+  "name": "Center Window",
+  "description": "Center current window using a keybinding",
+  "settings-schema": "org.gnome.shell.extensions.center-window-shortcut"
+}
