@@ -1,4 +1,3 @@
-const Lang = imports.lang;
 const Main = imports.ui.main;
 const Meta = imports.gi.Meta;
 const Shell = imports.gi.Shell;
@@ -6,6 +5,8 @@ const Shell = imports.gi.Shell;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
+
+const SHORTCUT_NAME = 'center-window-shortcut';
 
 function _centerWindow() {
 
@@ -26,14 +27,14 @@ function init(meta) {
 }
 
 function enable() {
-    Main.wm.addKeybinding('center-window-shortcut',
-         Convenience.getSettings(),
-         Meta.KeyBindingFlags.NONE,
-         Shell.ActionMode.NORMAL,
-         _centerWindow
-       );
+    Main.wm.addKeybinding(SHORTCUT_NAME,
+        Convenience.getSettings(),
+        Meta.KeyBindingFlags.NONE,
+        Shell.ActionMode.NORMAL,
+        _centerWindow
+    );
 }
 
 function disable() {
-    Main.wm.removeKeybinding('center-window-shortcut');
+    Main.wm.removeKeybinding(SHORTCUT_NAME);
 }
